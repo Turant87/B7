@@ -1,17 +1,36 @@
-# This is a sample Python script.
+# try:
+#     raise ZeroDivisionError # возбуждаем исключение ZeroDivisionError
+# except ArithmeticError: # ловим его родителя
+#     print("Hello from arithmetic error")
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+# class ParentException(Exception):
+#     def __init__(self, message,
+#                  error):  # допишем к нашему пустому классу конструктор, который будет печатать дополнительно в консоль информацию об ошибке.
+#         super().__init__(message)  # помним про вызов конструктора родительского класса
+#         print(f"Errors: {error}")  # печатаем ошибку
+#
+#
+# class ChildException(ParentException):  # создаём пустой класс – исключение наследника, наследуемся от ParentException
+#     def __init__(self, message, error):
+#         super().__init__(message, error)
+#
+#
+# try:
+#     raise ChildException("message", "error")  # поднимаем исключение-наследник, передаём дополнительный аргумент
+# except ParentException as e:
+#     print(e)  # выводим информацию об исключении
 
+# import os
+# import sys
+#
+# print(os.getcwd())
+# print(os.listdir())
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+# import math
+# print(math.pi)
 
+# import math as m # Даем новое имя Модулю
+# print(m.pi)
 
-# Press the green button in the gutter to run the script.
-
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# from math import pi as PI # Даем новое имя функции или переменной
+# print(PI)
