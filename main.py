@@ -53,13 +53,67 @@
 # print('Время вышло')
 
 
-from scrypt import area_circle
-from scrypt import square_area
-from scrypt import triangle_area
+# from scrypt import area_circle
+# from scrypt import square_area
+# from scrypt import triangle_area
+#
+# print(area_circle(2))
+# print(square_area(4))
+# print(triangle_area(2, 6))
 
-print(area_circle(2))
-print(square_area(4))
-print(triangle_area(2, 6))
+# import os
+#
+# start_path = os.getcwd() # Получить текущий путь
+# print(start_path)
+# print(os.listdir())
+# if 'main.py' not in os.listdir():
+#     print('Файла main.py, нет в директории!')
+# else:
+#     print('Все хорошо, файл main.py на месте')
+
+# f = open('text.txt', 'w', encoding='utf8') # Создали файл
+# f.write('Какой-то текст!\n') # Записали что-то в файл
+# f.write('Еще текст!\n')
+# f.close() # Обязательно закрыли файл
+#
+# f = open('text.txt', 'r', encoding='utf8') # Открыли файл
+# print(f.read())
+# f.close()
+#
+# f = open('text.txt', 'a', encoding='utf8') # Открыли файл на дозапись
+# sequense = ['Other string?\n', '12345\n', 'И еще одна строка!\n']
+# f.writelines(sequense) # Берет строки из sequnse и записывает в файл
+# f.close()
+#
+# f = open('text.txt', 'r', encoding='utf8')
+# print(f.readline()) # Метод f.readline() возвращает строку (символы от текущей позиции до символа переноса строки):
+# print(f.read(4))
+# print(f.readline())
+# f.close()
+#
+# with open('text.txt', 'a', encoding='utf8') as f: # Убирает необходимость открытия и ЗАКРЫТИЯ файла
+#     f.writelines('Еще чуть-чуть текста?\n')
+#
+# f = open('text.txt', 'r', encoding='utf8')
+# for line in f:
+#     print(line, ('|' * 10))
+# f.close()
+
+# with open('input.txt', 'r') as input_file: # Открыте файла input.txt на чтение
+#    with open('output.txt', 'w') as output_file: # Открытие файла output.txt на запись
+#        for line in input_file:
+#            output_file.write(line) # Построчная перезапись данных из файла input.txt в файл output.txt
+
+with open('numbers.txt', 'r', encoding='utf8') as numbers:
+    with open('output.txt', 'w', encoding='utf8') as output_file:
+        for line in numbers:
+            output_file.writelines(max(line))
+
+
+
+
+
+
 
 
 
