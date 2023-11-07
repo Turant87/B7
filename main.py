@@ -34,3 +34,33 @@
 
 # from math import pi as PI # Даем новое имя функции или переменной
 # print(PI)
+
+# import time
+#
+# print(time.strftime('%X')) # Вывод времени
+# print(time.strftime('%M')) # Вывод минут
+# print(time.strftime('%x')) # Вывод даты
+# print(time.strftime('%m')) # Вывод месяца
+
+# import time
+#
+# i = 10
+#
+# while i != -1:
+#     print(i)
+#     time.sleep(1)
+#     i -= 1
+# print('Время вышло')
+
+
+from scrypt import area_circle
+from scrypt import square_area
+from scrypt import triangle_area
+
+print(area_circle(2))
+print(square_area(4))
+print(triangle_area(2, 6))
+
+
+
+
