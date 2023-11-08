@@ -104,11 +104,15 @@
 #        for line in input_file:
 #            output_file.write(line) # Построчная перезапись данных из файла input.txt в файл output.txt
 
-with open('numbers.txt', 'r', encoding='utf8') as numbers:
-    with open('output.txt', 'w', encoding='utf8') as output_file:
-        for line in numbers:
-            output_file.writelines(max(line))
-
+with open('numbers.txt', 'r', encoding='utf8') as f:
+    numbers = []
+    for line in f:
+        numbers.append(float(line))
+    sum_ = min(numbers) + max(numbers)
+with open('output.txt', 'a', encoding='utf8') as output_file:
+    output_file.write('Сумма наибольшего и наименьшего числа в файле = ' + str(sum_))
+    output_file.write('\n')
+print(min(numbers), '---', max(numbers))
 
 
 
